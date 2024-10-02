@@ -1,0 +1,5 @@
+resource "mongodbatlas_project_invitation" "invitation-{{ user.username }}" {
+  username    = "{{ user.email }}"
+  project_id  = var.project_id
+  roles       = [ "GROUP_READ_ONLY", "GROUP_DATA_ACCESS_READ_ONLY", "GROUP_SEARCH_INDEX_EDITOR" ]
+}
