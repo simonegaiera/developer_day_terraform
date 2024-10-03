@@ -9,7 +9,8 @@
     - variables.tf
 3. Modify accordingly if the project already exist
 4. Create the user_list.csv to include all your user, from the template
-5. Run "python create_env.py" to generate the Terraform file for Database Users and Project Invitation
+5. Create the ".env" file from the template
+6. Run "python create_env.py" to generate the Terraform file for Database Users and Project Invitation
 
 
 ### Run Terraform
@@ -18,5 +19,5 @@
 
 
 ### Populate Database
-1. Create the ".env" file from the template
+1. Verify the ".env" file
 2. Run the file "populate_collection.py" to create all the collection for the user
