@@ -24,7 +24,8 @@
    - Create a `.env` file based on the template provided. Ensure all necessary environment variables are included.
 
 6. **Generate Terraform Configuration**  
-   - Execute the command:  
+   - Install the requirements
+   - Execute the command:
      ```bash
      python generate_terraform.py
      ```  
