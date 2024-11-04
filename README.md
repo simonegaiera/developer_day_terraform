@@ -1,4 +1,4 @@
-# Developer Day Enviroment Preparation
+# Developer Day Environment Preparation
 
 ## Create the cluster
 
