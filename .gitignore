@@ -1,3 +1,4 @@
 user_list.csv
 terraform/*
+.venv/
 .env
