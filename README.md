@@ -63,9 +63,7 @@
 1. **Verify Environment Variables**  
    - Double-check the contents of the `.env` file to ensure all variables are correctly set.
 
-2. **Copy the gzip**
-
-3. **Run Database Population Script**  
+2. **Run Database Population Script**  
    - Execute the following command to create all necessary collections for the users:
      ```bash
      python populate_database_library.py
