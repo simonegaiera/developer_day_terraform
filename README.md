@@ -47,6 +47,10 @@
      terraform apply
      ```
 
+### Known Issues:
+- Projects are limited to 100 database users by default, increase the limit via the API [setProjectLimit](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Projects/operation/setProjectLimit).
+Limit name: atlas.project.security.databaseAccess.users
+
 ## Populate the Data
 
 ### AirBnB Workshop
