@@ -60,7 +60,7 @@ curl --user "PUBLIC_API_KEY:PRIVATE_API_KEY" \
   --digest \
   -H 'Content-Type: application/json' \
   -H "Accept: application/vnd.atlas.2023-01-01+json" \
-  -X PATCH "https://cloud.mongodb.com/api/atlas/v2/groups/{groupId}}/limits/atlas.project.security.databaseAccess.users" \
+  -X PATCH "https://cloud.mongodb.com/api/atlas/v2/groups/{groupId}/limits/atlas.project.security.databaseAccess.users" \
   --data '{"value": 300, "name": "atlas.project.security.databaseAccess.users"}'
 ```
 
