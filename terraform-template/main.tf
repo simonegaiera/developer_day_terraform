@@ -15,12 +15,17 @@ provider "mongodbatlas" {
   private_key = var.private_key
 }
 
-# data "mongodbatlas_roles_org_id" "org" {}
+data "mongodbatlas_roles_org_id" "org" {}
 
-# resource "mongodbatlas_project" "project" {
-#   name   = var.project_name
-#   org_id = data.mongodbatlas_roles_org_id.org.org_id
-# }
+resource "mongodbatlas_project" "project" {
+  name   = var.project_name
+  org_id = data.mongodbatlas_roles_org_id.org.org_id
+
+  limits {
+    name = "atlas.project.security.databaseAccess.users"
+    value = 250
+  }
+}
 
 #
 # Create a Shared Tier Cluster
