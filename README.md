@@ -47,9 +47,24 @@
      terraform apply
      ```
 
-### Known Issues:
-- Projects are limited to 100 database users by default, increase the limit via the API [setProjectLimit](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Projects/operation/setProjectLimit).
-Limit name: atlas.project.security.databaseAccess.users
+### Known Issues
+
+- By default, projects are limited to **100 database users**. If you need to increase this limit, you can do so via the API using the `setProjectLimit` endpoint. 
+
+**Limit Name:** `atlas.project.security.databaseAccess.users`
+
+- For more details, refer to the [API documentation](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Projects/operation/setProjectLimit).
+
+- To increase the limit to **300 database users**, you can use the following `curl` command:
+
+```bash
+curl --user "PUBLIC_API_KEY:PRIVATE_API_KEY" \
+  --digest \
+  -H 'Content-Type: application/json' \
+  -H "Accept: application/vnd.atlas.2023-01-01+json" \
+  -X PATCH "https://cloud.mongodb.com/api/atlas/v2/groups/670423f2227e3573347794e6/limits/atlas.project.security.databaseAccess.users" \
+  --data '{"value": 300, "name": "atlas.project.security.databaseAccess.users"}'
+```
 
 ## Populate the Data
 
