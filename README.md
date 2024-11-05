@@ -49,9 +49,7 @@
 
 ### Known Issues
 
-- By default, projects are limited to **100 database users**. If you need to increase this limit, you can do so via the API using the `setProjectLimit` endpoint. 
-
-**Limit Name:** `atlas.project.security.databaseAccess.users`
+- By default, projects are limited to **100 database users**. If you need to increase this limit, you can do so via the API using the `setProjectLimit` endpoint. The limit name is `atlas.project.security.databaseAccess.users`.
 
 - For more details, refer to the [API documentation](https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/#tag/Projects/operation/setProjectLimit).
 
