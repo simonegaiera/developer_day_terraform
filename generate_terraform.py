@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 import sys
 
+
 # Load environment variables from .env file
 def load_env_variables():
     dotenv_path = '.env'

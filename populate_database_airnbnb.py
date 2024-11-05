@@ -7,6 +7,8 @@ from requests.auth import HTTPDigestAuth
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from dotenv import load_dotenv
+import certifi
+
 
 def load_env_variables():
     """Load environment variables from .env file."""
@@ -61,7 +63,7 @@ def csv_to_dict_array(csv_file_path):
 
 def get_client():
     """Create and return a MongoDB client."""
-    client = MongoClient(os.getenv('MONGO_CONNECTION_STRING'), server_api=ServerApi('1'))
+    client = MongoClient(os.getenv('MONGO_CONNECTION_STRING'), server_api=ServerApi('1'), tlsCAFile=certifi.where())
     try:
         client.admin.command('ping')
         print("Pinged your deployment. You successfully connected to MongoDB!")
