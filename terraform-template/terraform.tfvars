@@ -2,7 +2,7 @@ public_key = "public_key"
 
 private_key  = "private_key"
 
-project_name = "MongoDB-Workshop"
+project_name = "MongoDB-GameDay"
 
 project_id = "project_id"
 
